@@ -1,6 +1,6 @@
 <template>
   <a :href="link">
-    <button class="bg-[#359E65] py-[12px] px-[35px] rounded-[3px]">
+    <button class="bg-[#359E65] py-[12px] px-[35px] rounded-[3px] w-full">
       <p class="text-[#F0F0F0] text-[1em]">{{ msg }}</p>
     </button>
   </a>

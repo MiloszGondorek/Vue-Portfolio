@@ -1,37 +1,53 @@
 <template>
-  <div class="h-[calc(100vh-70px)] mt-[70px] grid grid-rows-3">
-    <div class="row-span-2 w-4/5 limit mx-auto flex">
-      <div class="left w-full max-w-fit my-auto">
-        <div class="limit mx-auto">
-          <p class="text-[1.25em] text-[#359E65]">Hello Im Miłosz</p>
-          <h1 class="text-[3.125em]">WEB DEVELOPER</h1>
-          <div class="flex my-[24px]">
-            <div class="w-[2px] bg-[#BDBDBD]"></div>
-            <p class="text-[#BDBDBD] ml-[6px] font-light">
-              Hi my name is Milosz.<br />
-              I’m freelancer and full-stack<br />
-              web developer from Poland
+  <div class="md:h-[calc(100vh-70px)] mt-[70px] md:grid grid-rows-3">
+    <div class="row-span-2 flex flex-col justify-center min-h-[60vh] relative">
+      <div class="w-4/5 limit mx-auto h-full flex">
+        <div class="left w-full max-w-fit my-auto">
+          <div class="limit mx-auto">
+            <p class="text-[1.25em] text-[#359E65] font-[500]">
+              Hello Im Miłosz
             </p>
+            <h1 class="text-[3.125em]">WEB DEVELOPER</h1>
+            <div class="flex my-[24px]">
+              <div class="w-[2px] bg-[#BDBDBD]"></div>
+              <p class="text-[#BDBDBD] ml-[6px] font-light">
+                Hi my name is Milosz.<br />
+                I’m freelancer and full-stack<br />
+                web developer from Poland
+              </p>
+            </div>
+            <ButtonVue
+              msg="ABOUT ME"
+              class="ml-auto block w-fit"
+              @click="scrollToElement('about')"
+            />
           </div>
-          <ButtonVue
-            msg="ABOUT ME"
-            class="ml-auto block w-fit"
-            @click="scrollToElement('about')"
-          ></ButtonVue>
+        </div>
+        <div class="hidden md:block right w-full">
+          <div class="relative w-full h-full">
+            <img
+              src="@/assets/me.png"
+              alt=""
+              class="absolute object-scale-down left-0 xl:left-[unset] right-[unset] xl:right-0 bottom-[-5px] max-h-[90%] max-w-[150%] min-h-[200px] lg:min-h-[50%] min-w-[50%] z-[-1]"
+            />
+          </div>
         </div>
       </div>
-      <div class="right w-full">
-        <div class="block relative w-full h-full overflow-hidden">
-          <img
-            src="@/assets/me2.png"
-            alt=""
-            class="absolute object-scale-down right-0 bottom-[-5px] h-[90%]"
-          />
-        </div>
+      <img
+        src="@/assets/waves.png"
+        class="absolute left-0 bottom-[30px] -z-10"
+        alt=""
+      />
+      <div
+        class="absolute right-0 sm:right-[35%] md:right-[50%] sm:translate-x-1/2 top-0 sm:top-[-50px] w-[30vw] min-w-[150px] max-w-[300px] rotate-12"
+      >
+        <img src="@/assets/hexes.png" class="animImg2 animLong" alt="" />
       </div>
     </div>
     <div class="w-full relative flex flex-col justify-center">
-      <div class="w-4/5 mx-auto limit flex justify-between">
+      <div
+        class="w-4/5 md:w-11/12 lg:w-4/5 mx-auto limit flex flex-col md:flex-row justify-between gap-y-[30px]"
+      >
         <Info
           title="Website design"
           desc="Responsive and Mobile-Friendly Website Design"
@@ -51,8 +67,18 @@
         />
       </div>
       <div
-        class="bg absolute right-0 w-1/2 bg-[#1C1C1C] h-full top-0 z-[-1]"
+        class="bg absolute right-0 w-3/4 md:w-1/2 bg-[#1C1C1C] h-full top-0 z-[-2]"
       ></div>
+      <img
+        src="@/assets/circles.png"
+        class="animImg absolute right-0 top-[30px] z-[-1] h-[20vw] max-h-[80%] min-h-[150px]"
+        alt=""
+      />
+      <div
+        class="absolute left-0 -translate-x-1/2 bottom-1/2 md:bottom-0 translate-y-1/2 z-[-1] h-[50vw] md:h-[20vw] max-h-[80%] min-h-[150px]"
+      >
+        <img src="@/assets/hexes.png" class="animImg2 animLong" alt="" />
+      </div>
     </div>
   </div>
 </template>

@@ -1,11 +1,17 @@
 <template>
   <div
-    class="w-[calc((100%/3)-8px)] bg-[#1F1F1F] max-w-[300px] py-[30px] px-[15px] rounded-[5px] flex flex-col gap-[15px]"
-    v-bind:class="dark ? 'dark' : 'color bg-[#359E65]'"
+    class="w-full md:w-[calc((100%/3)-8px)] bg-[#292929] md:max-w-[300px] py-[30px] px-[30px] rounded-[5px] flex flex-col gap-[15px]"
+    v-bind:class="dark ? 'dark' : 'color !bg-[#359E65]'"
   >
-    <img :src="img" alt="" class="w-[60px] h-[60px] object-scale-down" />
-    <h1 class="text-[1.25em]">{{ title }}</h1>
-    <p class="text-[1em]">{{ desc }}</p>
+    <img
+      :src="img"
+      alt=""
+      class="w-[60px] h-[60px] object-scale-down mx-auto md:mx-0"
+    />
+    <h1 class="text-[1.25em] w-fit mx-auto md:mx-0">{{ title }}</h1>
+    <p class="text-[1em] w-fit mx-auto md:mx-0 text-center md:text-left">
+      {{ desc }}
+    </p>
   </div>
 </template>
 

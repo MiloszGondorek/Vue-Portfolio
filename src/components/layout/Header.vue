@@ -8,7 +8,7 @@
           M
         </p></a
       >
-      <div class="left my-auto flex gap-[40px]">
+      <div class="hidden md:flex left my-auto gap-[40px]">
         <a href="">
           <p>HOME</p>
         </a>

@@ -1,6 +1,6 @@
 <template>
-  <footer class="w-screen bg-[#151515] h-[60px] flex">
-    <div class="w-full limit m-auto flex justify-between">
+  <footer class="w-full bg-[#151515] h-[60px] flex">
+    <div class="w-4/5 limit m-auto flex justify-between">
       <p class="my-auto">mpages.pl 2024</p>
       <div class="flex gap-[20px]">
         <img src="@/assets/mail.png" alt="" />

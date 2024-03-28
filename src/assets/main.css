@@ -52,3 +52,55 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@keyframes moveAndRotate {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+  }
+  25% {
+    transform: translateY(10%) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-10%) rotate(180deg);
+  }
+  75% {
+    transform: translateY(10%) rotate(270deg);
+  }
+  100% {
+    transform: translateY(-10%) rotate(360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
+.animImg {
+  animation-name: moveAndRotate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animImg2 {
+  animation-name: move;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animBack {
+  animation-direction: reverse;
+}
+
+.animLong {
+  animation-duration: 40s;
+}

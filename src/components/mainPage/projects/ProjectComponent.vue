@@ -1,5 +1,9 @@
 <template>
-  <a class="relative aspect-[0.8]" href="https://google.com" target="_blank">
+  <a
+    class="relative aspect-[1.2] lg:aspect-[0.8]"
+    href="https://google.com"
+    target="_blank"
+  >
     <div
       class="absolute overflow-hidden container rounded-[6px] cursor-pointer"
     >
@@ -37,13 +41,14 @@ export default {
   top: 50%;
   height: 100%;
   width: 100%;
-  transition: height 0.3s, width 0.3s;
+  transition: height 0.3s, width 0.3s, box-shadow 0.3s;
   transform: translate(-50%, -50%);
 }
 .container:hover {
   height: 105%;
   width: 105%;
   z-index: 5;
+  box-shadow: 0px 0px 16px 0px #46bd7d40;
 }
 .bg {
   background-image: linear-gradient(
