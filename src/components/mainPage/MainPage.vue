@@ -1,8 +1,10 @@
 <template>
-  <Main />
-  <About />
-  <Projects />
-  <Contact />
+  <div class="relative">
+    <Main id="main" />
+    <About id="about" />
+    <Projects id="projects" />
+    <Contact id="contact" />
+  </div>
 </template>
 
 <script>

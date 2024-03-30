@@ -1,6 +1,11 @@
 <template>
   <div class="py-[70px] md:py-[120px] relative">
-    <h1 class="gradientText text-[2.1875em] w-fit mx-auto">My projects</h1>
+    <h1
+      class="gradientText text-[2.1875em] w-fit mx-auto showText"
+      id="projectsH"
+    >
+      My projects
+    </h1>
     <div class="absolute top-0 left-0 h-full w-full -z-10">
       <img
         src="@/assets/light.png"
@@ -14,7 +19,10 @@
       />
     </div>
     <div class="w-5/6 max-w-[1500px] mx-auto">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[20px] mt-[20px]">
+      <div
+        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[20px] mt-[20px]"
+        id="projectsContainer"
+      >
         <Project
           :img="require('@/assets/portfolio/portfolio1.png')"
           header="Boxing club"
@@ -71,6 +79,23 @@ export default {
   components: {
     Project,
     ButtonVue,
+  },
+  mounted() {
+    const checkVisible = () => {
+      const t = isVisible(document.getElementById("projectsH"));
+      if (t) {
+        const childs = document.getElementById("projectsContainer").children;
+        for (var i = 0; i < childs.length; i++) {
+          (function (index) {
+            sleep(200 * index).then(() => {
+              childs[index].classList.add("showAnim");
+            });
+          })(i);
+        }
+        window.removeEventListener("scroll", checkVisible);
+      }
+    };
+    window.addEventListener("scroll", checkVisible);
   },
 };
 </script>

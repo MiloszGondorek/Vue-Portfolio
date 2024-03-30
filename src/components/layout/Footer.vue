@@ -3,9 +3,18 @@
     <div class="w-4/5 limit m-auto flex justify-between">
       <p class="my-auto">mpages.pl 2024</p>
       <div class="flex gap-[20px]">
-        <img src="@/assets/mail.png" alt="" />
-        <img src="@/assets/mail.png" alt="" />
-        <img src="@/assets/mail.png" alt="" />
+        <a href="https://github.com/MiloszGondorek" target="_blank">
+          <img src="@/assets/github.png" alt="" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/milosz-gondorek-428031223/"
+          target="_blank"
+        >
+          <img src="@/assets/linkedin.png" alt="" />
+        </a>
+        <a href="mailto:m.gondorek.kontakt@gmail.com">
+          <img src="@/assets/mail.png" alt="" />
+        </a>
       </div>
     </div>
   </footer>

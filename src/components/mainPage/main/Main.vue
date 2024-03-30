@@ -1,5 +1,5 @@
 <template>
-  <div class="md:h-[calc(100vh-70px)] mt-[70px] md:grid grid-rows-3">
+  <div class="md:h-[100vh] md:grid grid-rows-3">
     <div class="row-span-2 flex flex-col justify-center min-h-[60vh] relative">
       <div class="w-4/5 limit mx-auto h-full flex">
         <div class="left w-full max-w-fit my-auto">
@@ -19,7 +19,7 @@
             <ButtonVue
               msg="ABOUT ME"
               class="ml-auto block w-fit"
-              @click="scrollToElement('about')"
+              onclick="scrollToEl('about')"
             />
           </div>
         </div>
@@ -47,6 +47,8 @@
     <div class="w-full relative flex flex-col justify-center">
       <div
         class="w-4/5 md:w-11/12 lg:w-4/5 mx-auto limit flex flex-col md:flex-row justify-between gap-y-[30px]"
+        on-scroll="isVisible()"
+        id="mainInfo"
       >
         <Info
           title="Website design"
@@ -93,17 +95,22 @@ export default {
     Info,
     ButtonVue,
   },
-  methods: {
-    scrollToElement(id) {
-      var element = document.getElementById(id);
-      if (element) {
-        var offsetTop = element.offsetTop - 75;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        });
+  mounted() {
+    const checkVisible = () => {
+      const t = isVisible(document.getElementById("mainInfo"));
+      if (t) {
+        const childs = document.getElementById("mainInfo").children;
+        for (var i = 0; i < childs.length; i++) {
+          (function (index) {
+            sleep(200 * index).then(() => {
+              childs[index].classList.add("showAnim");
+            });
+          })(i);
+        }
+        window.removeEventListener("scroll", checkVisible);
       }
-    },
+    };
+    window.addEventListener("scroll", checkVisible);
   },
 };
 </script>

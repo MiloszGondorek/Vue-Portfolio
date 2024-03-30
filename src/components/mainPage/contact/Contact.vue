@@ -1,7 +1,9 @@
 <template>
   <div class="w-full bg-[#1C1C1C] pt-[50px] pb-0 lg:pb-[50px]">
     <div class="limit lg:w-4/5 mx-auto">
-      <h1 class="gradientText text-[2.1875em] w-4/5 lg:w-fit mx-auto lg:mx-0">
+      <h1
+        class="gradientText text-[2.1875em] w-4/5 lg:w-fit mx-auto lg:mx-0 showText"
+      >
         Contact me
       </h1>
       <div
@@ -25,20 +27,32 @@
             class="bg-[#292929] lg:bg-transparent"
           />
         </div>
-        <div
+        <form
+          id="mailForm"
           class="flex flex-col gap-4 min-w-[50%] w-4/5 lg:w-fit mx-auto lg:mx-0"
         >
           <div class="flex flex-col sm:flex-row gap-4">
-            <input type="text" placeholder="Name" class="sm:w-1/2" />
-            <input type="text" placeholder="Phone" class="sm:w-1/2" />
+            <input
+              type="text"
+              placeholder="Name"
+              class="sm:w-1/2 formInput opacity-0"
+            />
+            <input
+              type="text"
+              placeholder="Phone"
+              class="sm:w-1/2 formInput opacity-0"
+              v-model="phoneNumber"
+              @input="validateInput"
+            />
           </div>
-          <input type="text" placeholder="E-mail" />
+          <input type="text" placeholder="E-mail" class="formInput opacity-0" />
           <textarea
             placeholder="Message"
-            class="my-[10px] min-h-[50px]"
+            class="my-[10px] min-h-[50px] formInput opacity-0"
           ></textarea>
+          <p id="error" class="hidden"></p>
           <ButtonVue msg="Send message" link="asd" class="ml-auto" />
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -53,6 +67,85 @@ export default {
   components: {
     ButtonVue,
     ContactInfo,
+  },
+  mounted() {
+    window.addEventListener("load", function () {
+      document
+        .getElementById("mailForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+
+          fetch("mail.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              const error = document.getElementById("error");
+              error.classList.remove("hidden");
+              if (data == "null") {
+                const form = document.getElementById("mailForm");
+                Array.from(form.querySelectorAll("input,textarea")).forEach(
+                  (element) => {
+                    element.value = "";
+                  }
+                );
+
+                error.classList.remove("error");
+                error.classList.add("correct");
+                error.innerHTML = "Email has been sent";
+              } else {
+                error.classList.remove("correct");
+                error.classList.add("error");
+                error.innerHTML = data;
+              }
+            });
+        });
+    });
+
+    const checkVisible = () => {
+      const t = isVisible(document.getElementById("mailForm"));
+      if (t) {
+        const info = document.getElementsByClassName("contactInfo");
+        for (var i = 0; i < info.length; i++) {
+          (function (index) {
+            sleep(200 * index).then(() => {
+              info[index].classList.add("showText");
+            });
+          })(i);
+        }
+        const input = document.getElementsByClassName("formInput");
+        for (var i = 0; i < input.length; i++) {
+          (function (index) {
+            sleep(200 * index).then(() => {
+              input[index].classList.add("showAnim");
+            });
+          })(i);
+        }
+        window.removeEventListener("scroll", checkVisible);
+      }
+    };
+    window.addEventListener("scroll", checkVisible);
+  },
+  data() {
+    return {
+      phoneNumber: "", // Inicjujemy pole tekstowe pustą wartością
+    };
+  },
+  methods: {
+    validateInput() {
+      this.phoneNumber = this.phoneNumber.replace(/[^\d\s-]/g, "");
+
+      this.phoneNumber = this.phoneNumber.replace(/-+/g, "-");
+
+      this.phoneNumber = this.phoneNumber.replace(/\s+/g, " ");
+
+      if (this.phoneNumber.length > 11) {
+        this.phoneNumber = this.phoneNumber.slice(0, 11);
+      }
+    },
   },
 };
 </script>

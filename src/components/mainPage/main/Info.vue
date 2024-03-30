@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full md:w-[calc((100%/3)-8px)] bg-[#292929] md:max-w-[300px] py-[30px] px-[30px] rounded-[5px] flex flex-col gap-[15px]"
+    class="opacity-0 flex w-full md:w-[calc((100%/3)-8px)] bg-[#292929] md:max-w-[300px] py-[30px] px-[30px] rounded-[5px] flex-col gap-[15px]"
     v-bind:class="dark ? 'dark' : 'color !bg-[#359E65]'"
   >
     <img
