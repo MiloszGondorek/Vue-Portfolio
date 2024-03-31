@@ -54,18 +54,18 @@
           title="Website design"
           desc="Responsive and Mobile-Friendly Website Design"
           dark="true"
-          :img="require('@/assets/person.png')"
+          :img="require('@/assets/design.png')"
         />
         <Info
           title="Technical support"
           desc="Responsive and Mobile-Friendly Website Design"
-          :img="require('@/assets/person2.png')"
+          :img="require('@/assets/support.png')"
         />
         <Info
           title="CMS"
           desc="Responsive and Mobile-Friendly Website Design"
           dark="true"
-          :img="require('@/assets/person.png')"
+          :img="require('@/assets/CMS.png')"
         />
       </div>
       <div

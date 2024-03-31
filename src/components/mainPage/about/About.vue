@@ -9,7 +9,7 @@
       ref="sticky"
     >
       <div
-        class="relative w-fit md:w-1/2 sm:max-w-[min(600px,calc(40vw))] mr-auto md:mr-0 ml-auto sm:ml-[10vw] md:ml-auto flex flex-col justify-center"
+        class="relative w-fit md:w-1/2 sm:max-w-[min(600px,40vw)] mr-auto md:mr-0 ml-auto sm:ml-[10vw] md:ml-auto flex flex-col justify-center"
         ref="hContainer"
       >
         <img

@@ -15,8 +15,9 @@
         <p onclick="scrollToEl('contact')" class="cursor-pointer">CONTACT</p>
       </div>
       <img
-        src="@/assets/mail.png"
-        class="block md:hidden w-[30px] h-[30px] my-auto cursor-pointer opacity-80 hover:opacity-100"
+        src="@/assets/more.png"
+        class="block md:hidden w-auto h-[25px] my-auto cursor-pointer opacity-50 hover:opacity-100"
+        draggable="false"
         id="more"
         alt=""
         onclick="showHeader()"
@@ -33,11 +34,12 @@
     <div class="flex flex-col w-full" ref="links">
       <div class="h-[80px] flex flex-col ml-[30px]">
         <img
-          src="@/assets/mail.png"
-          class="block md:hidden w-[30px] h-[30px] my-auto cursor-pointer opacity-80 hover:opacity-100"
+          src="@/assets/exit.png"
+          class="block md:hidden w-[25px] h-[25px] my-auto cursor-pointer opacity-80 hover:opacity-100"
           id="more"
           alt=""
           onclick="hideHeader()"
+          draggable="false"
         />
       </div>
       <p onclick="scrollToEl('main'), hideHeader()" class="cursor-pointer">
@@ -113,7 +115,7 @@ export default {
 }
 
 .side {
-  transition: transform 1s;
+  transition: transform 0.7s;
 }
 #more {
   transition: opacity 0.5s;

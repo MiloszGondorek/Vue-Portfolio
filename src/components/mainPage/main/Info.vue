@@ -7,6 +7,7 @@
       :src="img"
       alt=""
       class="w-[60px] h-[60px] object-scale-down mx-auto md:mx-0"
+      draggable="false"
     />
     <h1 class="text-[1.25em] w-fit mx-auto md:mx-0">{{ title }}</h1>
     <p class="text-[1em] w-fit mx-auto md:mx-0 text-center md:text-left">

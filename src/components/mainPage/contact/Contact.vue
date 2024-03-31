@@ -35,22 +35,50 @@
             <input
               type="text"
               placeholder="Name"
+              name="name"
               class="sm:w-1/2 formInput opacity-0"
             />
             <input
               type="text"
               placeholder="Phone"
               class="sm:w-1/2 formInput opacity-0"
+              name="phone"
               v-model="phoneNumber"
               @input="validateInput"
             />
           </div>
-          <input type="text" placeholder="E-mail" class="formInput opacity-0" />
+          <input
+            type="text"
+            placeholder="E-mail"
+            class="formInput opacity-0"
+            name="mail"
+          />
           <textarea
             placeholder="Message"
             class="my-[10px] min-h-[50px] formInput opacity-0"
+            name="message"
           ></textarea>
-          <p id="error" class="hidden"></p>
+          <label class="flex gap-x-[10px] cursor-pointer">
+            <div class="my-auto w-[15px] h-[15px] relative">
+              <input type="checkbox" id="policy" class="hidden" name="terms" />
+              <img
+                :src="require('@/assets/checkbox.png')"
+                alt=""
+                id="policyImg"
+                class="absolute top-1/2 left-0 -translate-y-1/2"
+              />
+            </div>
+            <p class="select-none">
+              I agree to the
+              <a
+                href="/policy.html"
+                target="_blank"
+                class="cursor-pointer text-[#359E65] font-[500] opacity-80 hover:opacity-100"
+                >privacy policy</a
+              >
+            </p>
+          </label>
+          <p id="error" class="hidden">123</p>
           <ButtonVue msg="Send message" link="asd" class="ml-auto" />
         </form>
       </div>
@@ -67,6 +95,11 @@ export default {
   components: {
     ButtonVue,
     ContactInfo,
+  },
+  data() {
+    return {
+      phoneNumber: "",
+    };
   },
   mounted() {
     window.addEventListener("load", function () {
@@ -103,6 +136,13 @@ export default {
               }
             });
         });
+
+      const policy = this.document.getElementById("policy");
+      policy.addEventListener("change", function (e) {
+        document.getElementById("policyImg").src = policy.checked
+          ? require("@/assets/checkbox_selected.png")
+          : require("@/assets/checkbox.png");
+      });
     });
 
     const checkVisible = () => {
@@ -129,11 +169,6 @@ export default {
     };
     window.addEventListener("scroll", checkVisible);
   },
-  data() {
-    return {
-      phoneNumber: "", // Inicjujemy pole tekstowe pustą wartością
-    };
-  },
   methods: {
     validateInput() {
       this.phoneNumber = this.phoneNumber.replace(/[^\d\s-]/g, "");
@@ -156,6 +191,13 @@ img {
   width: 40px;
   height: 40px;
   object-fit: scale-down;
+}
+
+.correct {
+  color: #359e65;
+}
+.error {
+  color: #bd2b2b;
 }
 
 input::placeholder,

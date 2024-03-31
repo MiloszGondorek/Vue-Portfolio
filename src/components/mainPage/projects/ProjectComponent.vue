@@ -48,7 +48,7 @@ export default {
   height: 105%;
   width: 105%;
   z-index: 5;
-  box-shadow: 0px 0px 16px 0px #46bd7d40;
+  box-shadow: 0px 0px 16px 0px #46bd7d20;
 }
 .bg {
   background-image: linear-gradient(
