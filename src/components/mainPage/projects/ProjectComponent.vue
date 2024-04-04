@@ -1,7 +1,7 @@
 <template>
   <a
     class="relative aspect-[1.2] lg:aspect-[0.8] opacity-0"
-    href="https://google.com"
+    :href="link"
     target="_blank"
   >
     <div
@@ -29,6 +29,7 @@ export default {
   props: {
     header: String,
     img: String,
+    link: String,
   },
   components: {},
 };

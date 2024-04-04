@@ -24,20 +24,24 @@
         id="projectsContainer"
       >
         <Project
-          :img="require('@/assets/portfolio/portfolio1.png')"
-          header="Boxing club"
+          :img="require('@/assets/portfolio/vivida.png')"
+          header="Jewellery shop"
+          link="https://vivida.vercel.app"
         />
         <Project
-          :img="require('@/assets/portfolio/portfolio2.png')"
-          header="Boxing club"
+          :img="require('@/assets/portfolio/sushi.png')"
+          header="Sushi bar"
+          link="./pages/sushi/"
         />
         <Project
-          :img="require('@/assets/portfolio/portfolio3.png')"
+          :img="require('@/assets/portfolio/box.png')"
           header="Boxing club"
+          link="./pages/boxing/"
         />
         <Project
-          :img="require('@/assets/portfolio/portfolio1.png')"
-          header="Boxing club"
+          :img="require('@/assets/portfolio/coffee.png')"
+          header="Coffee shop"
+          link="./pages/coffee/"
         />
       </div>
       <ButtonVue

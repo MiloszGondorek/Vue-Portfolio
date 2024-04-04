@@ -58,12 +58,12 @@
         />
         <Info
           title="Technical support"
-          desc="Responsive and Mobile-Friendly Website Design"
+          desc="I will provide technical support for your website development."
           :img="require('@/assets/support.png')"
         />
         <Info
           title="CMS"
-          desc="Responsive and Mobile-Friendly Website Design"
+          desc="CMS simplifies website management for efficient content handling."
           dark="true"
           :img="require('@/assets/CMS.png')"
         />

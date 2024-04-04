@@ -12,20 +12,29 @@
         <div
           class="flex flex-col gap-x-[20px] lg:gap-y-[40px] h-fit mt-[50px] lg:mt-0"
         >
-          <ContactInfo
-            text="m.gondorek.kontakt@gmail.com"
-            :src="require('@/assets/MailColor.png')"
-            class="bg-[#292929] lg:bg-transparent"
-          />
-          <ContactInfo
-            text="+48 607 761 708"
-            :src="require('@/assets/PhoneColor.png')"
-          />
-          <ContactInfo
-            text="Miłosz Gondorek"
-            :src="require('@/assets/linkedinColor.png')"
-            class="bg-[#292929] lg:bg-transparent"
-          />
+          <a href="mailto:m.gondorek.kontakt@gmail.com">
+            <ContactInfo
+              text="m.gondorek.kontakt@gmail.com"
+              :src="require('@/assets/MailColor.png')"
+              class="bg-[#292929] lg:bg-transparent"
+            />
+          </a>
+          <a href="tel:+48607761708">
+            <ContactInfo
+              text="+48 607 761 708"
+              :src="require('@/assets/PhoneColor.png')"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/milosz-gondorek-428031223/"
+            target="_blank"
+          >
+            <ContactInfo
+              text="Miłosz Gondorek"
+              :src="require('@/assets/linkedinColor.png')"
+              class="bg-[#292929] lg:bg-transparent"
+            />
+          </a>
         </div>
         <form
           id="mailForm"
@@ -71,7 +80,7 @@
             <p class="select-none">
               I agree to the
               <a
-                href="/policy.html"
+                href="./policy.html"
                 target="_blank"
                 class="cursor-pointer text-[#359E65] font-[500] opacity-80 hover:opacity-100"
                 >privacy policy</a
