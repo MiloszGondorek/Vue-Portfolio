@@ -22,7 +22,7 @@
             class="block lg:absolute my-auto w-fit text-[3rem] sm:text-[4.5rem] md:text-[5rem] about-h top-1/2 right-0"
             ref="h1Text"
           >
-            ABOUT ME
+            O MNIE
           </h1>
         </div>
         <div
@@ -35,26 +35,30 @@
         class="bg-[#1C1C1C] w-full sm:w-3/4 md:w-1/2 min-h-[100%] right-0 top-0 flex flex-col justify-center pl-[50px] pr-[10vw] md:pr-[4.2vw] lg:pr-[100px] py-[30px] gap-[16px] z-[20]"
       >
         <h1 class="text-[1.45em] font-[500] gradientText textToAnim opacity-0">
-          Programming
+          Programowanie
         </h1>
         <p class="textToAnim opacity-0">
-          I am a programmer specializing in HTML, CSS, PHP, JS, C#. I will be an
-          employee who organizes his own work very well, but also knows how to
-          cooperate with a team. I approach solving the tasks entrusted to me
-          creatively. I have good communication skills. I would like to use my
-          skills at work and thus increase my knowledge and familiarity with
-          programming.
+          Tworzę nowoczesne strony internetowe, które są zarówno estetyczne, jak
+          i funkcjonalne. Dbam o to, by każda strona była dopasowana do potrzeb
+          klienta i łatwa w obsłudze. Zajmuję się również konfiguracją serwerów,
+          co zapewnia stabilność i bezpieczeństwo, a dodatkowo piszę teksty,
+          które wzbogacają treść na stronach.
         </p>
         <h1
           class="text-[1.45em] font-[500] mt-[30px] gradientText textToAnim opacity-0"
         >
-          Free time
+          Technologie
         </h1>
         <p class="textToAnim opacity-0">
-          I have been training boxing for three years, I love outdoor
-          activities, I often ride a bike, which helps me relieve stress. In
-          addition, I am a programmer who constantly develops my skills in
-          creating websites.
+          Angular: Używanie Angulara pozwala na tworzenie dynamicznych,
+          responsywnych aplikacji z wysoką wydajnością. Dzięki modularnej
+          architekturze i wsparciu Google, zapewnia stabilność i długoterminową
+          skalowalność projektów. <br />
+          <br />
+          Strapi: Strapi to elastyczny CMS typu headless, który umożliwia łatwe
+          zarządzanie treścią i integrację z różnymi front-endami. Jego
+          intuicyjny interfejs i możliwość dostosowania sprawiają, że jest
+          idealnym narzędziem do tworzenia nowoczesnych stron i aplikacji.
         </p>
       </div>
     </div>

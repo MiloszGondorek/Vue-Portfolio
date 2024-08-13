@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col justify-between min-h-screen">
+  <div class="min-h-screen flex flex-col justify-between">
     <Header />
-    <router-view></router-view>
+    <div>
+      <MainPage />
+    </div>
     <Footer />
   </div>
 </template>
@@ -11,10 +13,13 @@ import "./assets/main.css";
 import Header from "./components/layout/Header.vue";
 import Footer from "./components/layout/Footer.vue";
 
+import MainPage from "./components/mainPage/MainPage.vue";
+
 export default {
   name: "App",
   components: {
     Header,
+    MainPage,
     Footer,
   },
 };

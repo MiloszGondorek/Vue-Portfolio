@@ -1,23 +1,23 @@
 <template>
-  <div class="md:h-[100vh] md:grid grid-rows-3">
+  <div class="md:min-h-[100vh] md:grid grid-rows-3">
     <div class="row-span-2 flex flex-col justify-center min-h-[60vh] relative">
       <div class="w-4/5 limit mx-auto h-full flex">
         <div class="left w-full max-w-fit my-auto">
           <div class="limit mx-auto">
             <p class="text-[1.25em] text-[#359E65] font-[500]">
-              Hello Im Miłosz
+              Hej, jestem Miłosz
             </p>
             <h1 class="text-[3.125em]">WEB DEVELOPER</h1>
             <div class="flex my-[24px]">
               <div class="w-[2px] bg-[#BDBDBD]"></div>
               <p class="text-[#BDBDBD] ml-[6px] font-light">
-                Hi my name is Milosz.<br />
-                I’m freelancer and full-stack<br />
-                web developer from Poland
+                Hej, jestem Miłosz<br />
+                Jestem freelancerem, full-stack developerem i<br />
+                programistą stron internetowych
               </p>
             </div>
             <ButtonVue
-              msg="ABOUT ME"
+              msg="O MNIE"
               class="ml-auto block w-fit"
               onclick="scrollToEl('about')"
             />
@@ -51,19 +51,19 @@
         id="mainInfo"
       >
         <Info
-          title="Website design"
-          desc="Responsive and Mobile-Friendly Website Design"
+          title="Projektowanie stron"
+          desc="Projektuje strony internetowe dostosowane pod urządzenia mobilne"
           dark="true"
           :img="require('@/assets/design.png')"
         />
         <Info
-          title="Technical support"
-          desc="I will provide technical support for your website development."
+          title="Wsparcie techniczna"
+          desc="Zapewnię wsparcie techniczne przy tworzeniu strony oraz konfigurowaniu serwera"
           :img="require('@/assets/support.png')"
         />
         <Info
           title="CMS"
-          desc="CMS simplifies website management for efficient content handling."
+          desc="Strony zawierają CMS, który upraszcza zarządzanie stroną oraz usprawnia obsługę treści"
           dark="true"
           :img="require('@/assets/CMS.png')"
         />

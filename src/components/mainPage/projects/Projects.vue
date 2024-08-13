@@ -4,7 +4,7 @@
       class="gradientText text-[2.1875em] w-fit mx-auto showText"
       id="projectsH"
     >
-      My projects
+      Moje projekty
     </h1>
     <div class="absolute top-0 left-0 h-full w-full -z-10">
       <img
@@ -24,29 +24,29 @@
         id="projectsContainer"
       >
         <Project
+          :img="require('@/assets/portfolio/sushi.png')"
+          header="Sushi bar"
+          link="https://zen-sushi-nine.vercel.app"
+        />
+        <Project
+          :img="require('@/assets/portfolio/gym.png')"
+          header="Siłownia"
+          link="https://fit-fusion-neon.vercel.app"
+        />
+        <Project
           :img="require('@/assets/portfolio/vivida.png')"
-          header="Jewellery shop"
+          header="Sklep jubilerski"
           link="https://vivida.vercel.app"
         />
         <Project
-          :img="require('@/assets/portfolio/sushi.png')"
-          header="Sushi bar"
-          link="./pages/sushi/"
-        />
-        <Project
-          :img="require('@/assets/portfolio/box.png')"
-          header="Boxing club"
-          link="./pages/boxing/"
-        />
-        <Project
-          :img="require('@/assets/portfolio/coffee.png')"
-          header="Coffee shop"
-          link="./pages/coffee/"
+          :img="require('@/assets/portfolio/guitar.png')"
+          header="Wytwórnia muzyczna"
+          link="https://music-label-ten.vercel.app"
         />
       </div>
       <ButtonVue
         class="block w-fit min-w-[calc(50%)] sm:min-w-[calc(25%-10px)] lg:min-w-[calc(12.5%-20px)] ml-auto mt-[20px]"
-        msg="My github"
+        msg="Mój github"
         link="https://github.com/MiloszGondorek"
         target="_blank"
       />

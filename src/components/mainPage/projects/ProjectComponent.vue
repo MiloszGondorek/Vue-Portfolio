@@ -5,8 +5,9 @@
     target="_blank"
   >
     <div
-      class="absolute overflow-hidden container rounded-[6px] cursor-pointer"
+      class="absolute overflow-clip container rounded-[0px] cursor-pointer bg-black p-0"
     >
+      <div class="bg min-h-[50%] w-[100%] z-[5] absolute bottom-0"></div>
       <h1
         class="absolute w-fit max-w-[90%] left-1/2 -translate-x-1/2 bottom-[30px] z-[5] text-[1.125em]"
       >
@@ -15,10 +16,9 @@
       <img
         :src="img"
         alt=""
-        class="block h-full object-cover"
+        class="block h-full object-cover absolute w-full"
         draggable="false"
       />
-      <div class="bg h-1/2 w-full absolute bottom-0 left-0"></div>
     </div>
   </a>
 </template>
@@ -37,25 +37,26 @@ export default {
 
 <style scoped>
 .container {
-  box-shadow: 0px 0px 16px 0px rgba(118, 118, 118, 0.13);
+  /* box-shadow: 0px 0px 16px 0px rgba(118, 118, 118, 0.13); */
   left: 50%;
   top: 50%;
   height: 100%;
   width: 100%;
-  transition: height 0.3s, width 0.3s, box-shadow 0.3s;
+  /* transition: height 0.3s, width 0.3s; */
   transform: translate(-50%, -50%);
 }
 .container:hover {
   height: 105%;
   width: 105%;
   z-index: 5;
-  box-shadow: 0px 0px 16px 0px #46bd7d20;
+  /* box-shadow: 0px 0px 16px 0px #46bd7d20; */
 }
 .bg {
-  background-image: linear-gradient(
+  background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(41, 53, 86, 0) 100%
+    rgba(255, 255, 255, 0) 100%
   );
+  /* border-radius: 0px 0px 3px 3px; */
 }
 </style>

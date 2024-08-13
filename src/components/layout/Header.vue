@@ -9,10 +9,10 @@
         </p></a
       >
       <div class="hidden md:flex left my-auto gap-[40px]" ref="links">
-        <p onclick="scrollToEl('main')" class="cursor-pointer">HOME</p>
-        <p onclick="scrollToEl('about')" class="cursor-pointer">ABOUT</p>
-        <p onclick="scrollToEl('projects')" class="cursor-pointer">PROJECTS</p>
-        <p onclick="scrollToEl('contact')" class="cursor-pointer">CONTACT</p>
+        <p onclick="scrollToEl('main')" class="cursor-pointer">GŁÓWNA</p>
+        <p onclick="scrollToEl('about')" class="cursor-pointer">O MNIE</p>
+        <p onclick="scrollToEl('projects')" class="cursor-pointer">PROJEKTY</p>
+        <p onclick="scrollToEl('contact')" class="cursor-pointer">KONTAKT</p>
       </div>
       <img
         src="@/assets/more.png"
@@ -43,16 +43,16 @@
         />
       </div>
       <p onclick="scrollToEl('main'), hideHeader()" class="cursor-pointer">
-        HOME
+        GŁÓWNA
       </p>
       <p onclick="scrollToEl('about'), hideHeader()" class="cursor-pointer">
-        ABOUT
+        O MNIE
       </p>
       <p onclick="scrollToEl('projects'), hideHeader()" class="cursor-pointer">
-        PROJECTS
+        PROJEKTY
       </p>
       <p onclick="scrollToEl('contact'), hideHeader()" class="cursor-pointer">
-        CONTACT
+        KONTAKT
       </p>
     </div>
   </div>

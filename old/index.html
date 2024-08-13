@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/mail.js"></script>
+    <script src="./scripts/animations.js"></script>
+    <link rel="icon" href="./images/logo.svg">
+    <title>Mpages</title>
+</head>
+
+<body>
+    <div class="small_header">
+        <h3>Milosz Gondorek</h3>
+        <img src="./images/options.png" onclick="change_header()" id="header_switch">
+    </div>
+    <header>
+        <h3>Milosz Gondorek</h3>
+        <a href="#main">Home</a>
+        <a href="#about">About me</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="contact_link">Contact</a>
+        <div class="to_right">
+            <a href="#contact"><button>Contact me</button></a>
+        </div>
+    </header>
+    <div class="main" id="main">
+        <div class="content">
+            <div class="icons">
+                <div class="icons_left">
+                    <img src="./icons/arrows.svg" alt="" class="arrows">
+                    <img src="./icons/hex_light.svg" alt="" class="hex">
+                    <img src="./icons/waves.svg" alt="" class="waves">
+                    <img src="./icons/triangle.svg" alt="" class="triangle">
+                </div>
+                <div class="icons_right">
+                    <img src="./icons/hex_dark.svg" alt="" class="hex">
+                    <img src="./icons/circles_dark.svg" alt="" class="circles">
+                </div>
+            </div>
+
+            <div class="left" id="main_left">
+                <h2 class="main_content">FULL-STACK <span class="color_text">WEB DEVELOPER</span></h2>
+                <h1 class="main_content">MILOSZ <br />GONDOREK</h1>
+
+                <div class="info main_content">
+                    <div class="line"></div>
+                    <p>Hi my name is Milosz. <br /> I’m freelancer and full-stack web developer from Poland</p>
+                </div>
+                <a href="#projects" class="main_content"><button class="color_button">Porfolio</button></a>
+            </div>
+
+            <div class="right">
+                <div class="img">
+                    <img src="images/me2.png" alt="">
+                </div>
+                <div class="icons">
+                    <img src="./icons/dots.svg" alt="" class="dots">
+                    <img src="./icons/circles.svg" alt="" class="circles">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="top">
+            <img src="./images/about_top.svg" alt="">
+        </div>
+        <div class="icons">
+            <div class="left">
+                <img src="./icons/squares.svg" alt="" class="squares">
+                <img src="./icons/hex_green.svg" alt="" class="hex">
+            </div>
+            <div class="center">
+                <img src="./icons/circles_green.svg" alt="" class="circles">
+                <img src="./icons/triangle_green.svg" alt="" class="triangle">
+            </div>
+            <div class="right">
+                <img src="./icons/triangle_green.svg" alt="" class="triangle">
+                <img src="./icons/circle_green.svg" alt="" class="circle">
+                <img src="./icons/double_hex_green.svg" alt="" class="hex">
+            </div>
+        </div>
+        <div class="content">
+            <div class="left">
+                <img src="./images/me.png" alt="">
+            </div>
+            <div class="right">
+                <h2>About me</h2>
+                <div class="info">
+                    <h3>Programming</h3>
+                    <p>I am a programmer specializing in HTML, CSS, PHP, JS, C#. I will be an employee who organizes his
+                        own work very well, but also knows how to cooperate with a team. I approach solving the tasks
+                        entrusted to me creatively. I have good communication skills. I would like to use my skills at
+                        work and thus increase my knowledge and familiarity with programming.</p>
+                </div>
+                <div class="info">
+                    <h3>Free time</h3>
+                    <p>I have been training boxing for three years, I love outdoor activities, I often ride a bike,
+                        which helps me relieve stress. In addition, I am a programmer who constantly develops my skills
+                        in creating websites.</p>
+                </div>
+                <div class="buttons">
+                    <a href="#contact"><button class="color_button">Contact</button></a>
+                    <a href="./images/cv.pdf" target="_blank"><button class="outline_button">CV</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="projects" id="projects">
+        <div class="icons">
+            <div class="icons_top">
+                <img src="./icons/triangle_green.svg" alt="" class="triangle">
+                <img src="./icons/circle_green.svg" alt="" class="circle">
+            </div>
+            <div class="icons_bottom">
+                <img src="./icons/circles_green.svg" alt="" class="circles">
+                <img src="./icons/triangle_green.svg" alt="" class="triangle">
+                <img src="./icons/circle_green_full.svg" alt="" class="circle">
+            </div>
+        </div>
+        <div class="top">
+            <h2 class="color_text">Projects</h2>
+            <div class="arrows">
+                <div class="arrow" onclick="move_right()"><img src="./images/arrow-left.svg" alt=""></div>
+                <div class="arrow" onclick="move_left()"><img src="./images/arrow-right.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="icons">
+                <img src="./icons/circle_green.svg" alt="" class="circle">
+                <img src="./icons/hex_green.svg" alt="" class="hex">
+            </div>
+            <div class="project_content">
+                <div class="project">
+                    <img src="./images/portfolio1.png" alt="">
+                    <div class="link hover">
+                        <button class="outline_button" onclick="window.open('./pages/boxing/index.html')">See
+                            project</button>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./images/portfolio2.png" alt="">
+                    <div class="link hover">
+                        <button class="outline_button" onclick="window.open('./pages/sushi/index.html')">See
+                            project</button>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./images/portfolio3.png" alt="">
+                    <div class="link hover">
+                        <button class="outline_button" onclick="window.open('./pages/coffee/index.html')">See
+                            project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services" id="services">
+        <div class="icons">
+
+        </div>
+        <div class="content">
+            <div class="title">
+                <h1>My Services</h1>
+            </div>
+            <div class="description">
+                <p>I specialize in creating <span class="color">professional websites</span> that blend aesthetics with
+                    functionality. My services include <span class="color">graphic design</span>, feature
+                    development,SEO optimization. Whatever your needs, I'm <span class="color">ready to help you</span>
+                    create a website that stands out online and attracts customers</p>
+                <p>With a <span class="color">keen eye for design</span> and a deep understanding of web development,
+                    I'm committed to delivering tailored solutions that meet your <span class="color">specific
+                        goals</span>. I'm here to guide you through the process and ensure your <span
+                        class="color">online presence</span> not only stands out but also <span
+                        class="color">attracts</span> and engages your target audience.</p>
+            </div>
+            <div class="data">
+                <div class="top">
+                    <p class="active services_design_title" onclick="services_data('design')">Web design</p>
+                    <p class="services_programming_title" onclick="services_data('programming')">Website programming</p>
+                </div>
+                <div class="bottom">
+                    <div class="design services_design active">
+                        <ul>
+                            <li>UI/UX Optimization</li>
+                            <li>Custom Website Design</li>
+                            <li>Responsive design</li>
+                            <li>Mobile-Friendly Design</li>
+                            <li>Project in PSD or Figma</li>
+                        </ul>
+                    </div>
+                    <div class="programming services_programming">
+                        <ul>
+                            <li>Free website design</li>
+                            <li>CMS</li>
+                            <li>Technical support</li>
+                            <li>Database Design and Integration</li>
+                            <li>Custom Web Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="icons icons_bg">
+            <div class="left">
+                <img src="./icons/hex_green.svg" alt="" class="hex">
+                <img src="./icons/waves_green.svg" alt="" class="waves">
+                <img src="./icons/circles_green.svg" alt="" class="circles">
+            </div>
+            <div class="right">
+                <img src="./icons/hex_green.svg" alt="" class="hex1">
+                <img src="./icons/triangle_green.svg" alt="" class="triangle">
+                <img src="./icons/hex_green.svg" alt="" class="hex2">
+            </div>
+        </div>
+        <div class="content">
+            <div class="icons">
+                <img src="./icons/circles_green.svg" alt="" class="circles">
+                <img src="./icons/hex_dark_single.svg" alt="" class="hex_dark">
+                <img src="./icons/hex_green.svg" alt="" class="hex_green">
+                <img src="./icons/triangle_green.svg" alt="" class="triangle">
+                <img src="./icons/arrows.svg" alt="" class="arrows icon_contact_right">
+                <img src="./icons/double_hex_green.svg" alt="" class="double_hex icon_contact_right">
+                <img src="./icons/square.svg" alt="" class="square icon_contact_right">
+            </div>
+            <form class="left" id="myForm">
+                <h2 class="color_text">Contact me</h2>
+                <input type="text" placeholder="Name*" name="name" class="contact_input">
+                <input type="text" placeholder="E-mail*" name="mail" class="contact_input">
+                <input type="text" placeholder="Phone number" name="phone" class="phone_number contact_input">
+                <textarea placeholder="Message*" rows="6" name="message" class="contact_input"></textarea>
+                <label class="contact_input"><input type="checkbox" name="terms"> I agree to the <a
+                        href="./privacy policy.html" target="_blank">privacy policy</a></label>
+                <p id="error">Tutaj będzie treść błędu</p>
+                <button class="color_button contact_input">Send message</button>
+            </form>
+            <div class="right">
+                <div class="info">
+                    <span><img src="./images/mail.png" alt="">
+                        <p>m.gondorek.kontakt@gmail.com</p>
+                    </span>
+                    <span><img src="./images/phone.png" alt="">
+                        <p>+48 607 761 708</p>
+                    </span>
+                    <span><img src="./images/user.png" alt="">
+                        <p>Milosz Gondorek</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <a href="https://www.linkedin.com/in/milosz-gondorek-428031223/" target="_blank"> <img src="./images/linkedin.png"
+                    alt=""></a>
+            <a href="https://github.com/MiloszGondorek" target="_blank"><img src="./images/github.png" alt=""></a>
+            <a href="mailto:m.gondorek.kontakt@gmail.com" target="_blank"><img src="./images/mail.png" alt=""></a>
+        </div>
+        <div class="bottom">
+            <p>©mpages.pl 2023</p>
+            <a href="https://www.flaticon.com/free-icons/advisor" title="advisor icons" class="m-auto">
+                <p>All icons created by Freepik - Flaticon</p>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

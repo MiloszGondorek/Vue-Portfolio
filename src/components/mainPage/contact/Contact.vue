@@ -4,7 +4,7 @@
       <h1
         class="gradientText text-[2.1875em] w-4/5 lg:w-fit mx-auto lg:mx-0 showText"
       >
-        Contact me
+        Skontaktuj się
       </h1>
       <div
         class="flex flex-col-reverse lg:flex-row justify-between mt-[40px] lg:mb-[40px]"
@@ -43,13 +43,13 @@
           <div class="flex flex-col sm:flex-row gap-4">
             <input
               type="text"
-              placeholder="Name"
+              placeholder="Imie"
               name="name"
               class="sm:w-1/2 formInput opacity-0"
             />
             <input
               type="text"
-              placeholder="Phone"
+              placeholder="Telefon"
               class="sm:w-1/2 formInput opacity-0"
               name="phone"
               v-model="phoneNumber"
@@ -63,7 +63,7 @@
             name="mail"
           />
           <textarea
-            placeholder="Message"
+            placeholder="Treść wiadomośći..."
             class="my-[10px] min-h-[50px] formInput opacity-0"
             name="message"
           ></textarea>
@@ -78,12 +78,12 @@
               />
             </div>
             <p class="select-none">
-              I agree to the
+              Zgadzam się z
               <a
                 href="./policy.html"
                 target="_blank"
                 class="cursor-pointer text-[#359E65] font-[500] opacity-80 hover:opacity-100"
-                >privacy policy</a
+                >polityką prywatności</a
               >
             </p>
           </label>

@@ -1,17 +1,4 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import { createRouter, createWebHistory } from "vue-router";
 
-import MainPage from "./components/mainPage/MainPage.vue";
-import Policy from "./components/policy/Policy.vue";
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [
-    { path: "/", component: MainPage },
-    { path: "/about", component: Policy },
-  ],
-});
-
-const app = createApp(App);
-app.use(router);
-app.mount("#app");
+createApp(App).mount("#app");
